@@ -1,0 +1,298 @@
+.input-group {
+    position: relative;
+}
+.input-group::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.35s ease;
+    border-radius: 2px;
+    z-index: 2;
+    pointer-events: none;
+}
+.input-group:focus-within::after {
+    width: 100%;
+    left: 0;
+}
+.dark .input-group::after {
+    background: var(--primary);
+}
+.input-group .floating-label-input ~ label {
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: left center;
+}
+.input-group:focus-within .floating-label-input ~ label {
+    color: var(--primary);
+    transform: translateY(0) scale(1.05);
+}
+.input-group .floating-label-input:not(:placeholder-shown) ~ label {
+    transform: translateY(0) scale(1.05);
+}
+.type-ripple {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+.type-ripple.animate {
+    animation: typeRipple 0.5s ease-out forwards;
+}
+@keyframes typeRipple {
+    0% { width: 0%; left: 50%; opacity: 0.5; }
+    40% { width: 100%; left: 0%; opacity: 0.2; }
+    100% { width: 0%; left: 50%; opacity: 0; }
+}
+
+.btn-send {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.btn-send .btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.btn-send .btn-progress {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.btn-send.is-sending .btn-content {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+.btn-send.is-sending .btn-progress {
+    opacity: 1;
+    transform: scale(1);
+}
+.btn-send .progress-track {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--outline-variant);
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.btn-send.is-sending .progress-track {
+    opacity: 1;
+}
+.btn-send .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--primary), var(--primary-container));
+    border-radius: 3px;
+    transition: width 1.8s ease-out;
+}
+.btn-send.is-sending .progress-fill {
+    width: 100%;
+}
+.btn-send .sending-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sending-dots span {
+    display: inline-block;
+    animation: dotPulse 1.5s ease-in-out infinite;
+}
+.sending-dots span:nth-child(2) { animation-delay: 0.3s; }
+.sending-dots span:nth-child(3) { animation-delay: 0.6s; }
+@keyframes dotPulse {
+    0%, 80%, 100% { opacity: 0.3; transform: translateY(0); }
+    40% { opacity: 1; transform: translateY(-4px); }
+}
+
+.btn-send .btn-success {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: var(--tertiary);
+    border-radius: inherit;
+    color: var(--on-tertiary);
+}
+.btn-send.is-success .btn-success {
+    opacity: 1;
+    transform: scale(1);
+}
+.btn-send.is-success .btn-content,
+.btn-send.is-success .btn-progress {
+    opacity: 0;
+    transform: scale(0.6);
+}
+.btn-send.is-success .progress-track {
+    opacity: 0;
+}
+.btn-send .btn-success .check-icon {
+    width: 28px;
+    height: 28px;
+}
+.btn-send .btn-success .check-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.btn-send .btn-success .check-icon .check-path {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: drawCheck 0.5s 0.15s ease forwards;
+}
+@keyframes drawCheck {
+    to { stroke-dashoffset: 0; }
+}
+.btn-send .btn-success .success-label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: slideUpLabel 0.4s 0.3s ease forwards;
+}
+@keyframes slideUpLabel {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+.form-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.form-overlay .overlay-card {
+    background: var(--surface);
+    border-radius: 2rem;
+    padding: 3rem;
+    text-align: center;
+    max-width: 400px;
+    transform: scale(0.85) translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+.dark .form-overlay .overlay-card {
+    background: var(--surface-container-high);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.form-overlay.active .overlay-card {
+    transform: scale(1) translateY(0);
+}
+.form-overlay .overlay-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    background: var(--tertiary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--on-tertiary);
+    transform: scale(0);
+    transition: transform 0.5s 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.form-overlay.active .overlay-icon {
+    transform: scale(1);
+}
+.form-overlay .overlay-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.form-overlay .overlay-icon .overlay-check {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: drawCheck 0.5s 0.4s ease forwards;
+}
+.form-overlay .overlay-title {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 1.5rem;
+    color: var(--on-surface);
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideUpLabel 0.4s 0.5s ease forwards;
+}
+.form-overlay .overlay-desc {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.95rem;
+    color: var(--on-surface-variant);
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideUpLabel 0.4s 0.6s ease forwards;
+}
+.form-overlay .overlay-close {
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideUpLabel 0.4s 0.7s ease forwards;
+}
+.form-overlay .overlay-close:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(149, 63, 86, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .input-group::after,
+    .type-ripple,
+    .btn-send,
+    .btn-send *,
+    .form-overlay,
+    .form-overlay * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

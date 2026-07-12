@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skills & Proficiencies | Dr. Maheera Tahir</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Hanken+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0&display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<script>
+tailwind.config = {
+darkMode: "class",
+theme: {
+extend: {
+colors: {
+"surface": "var(--surface)", "surface-dim": "var(--surface-dim)", "surface-bright": "var(--surface-bright)", "surface-container-lowest": "var(--surface-container-lowest)", "surface-container-low": "var(--surface-container-low)", "surface-container": "var(--surface-container)", "surface-container-high": "var(--surface-container-high)", "surface-container-highest": "var(--surface-container-highest)", "on-surface": "var(--on-surface)", "on-surface-variant": "var(--on-surface-variant)", "inverse-surface": "var(--inverse-surface)", "inverse-on-surface": "var(--inverse-on-surface)", "outline": "var(--outline)", "outline-variant": "var(--outline-variant)", "primary": "var(--primary)", "on-primary": "var(--on-primary)", "primary-container": "var(--primary-container)", "on-primary-container": "var(--on-primary-container)", "inverse-primary": "var(--inverse-primary)", "secondary": "var(--secondary)", "on-secondary": "var(--on-secondary)", "secondary-container": "var(--secondary-container)", "on-secondary-container": "var(--on-secondary-container)", "tertiary": "var(--tertiary)", "on-tertiary": "var(--on-tertiary)", "tertiary-container": "var(--tertiary-container)", "on-tertiary-container": "var(--on-tertiary-container)", "error": "var(--error)", "on-error": "var(--on-error)", "error-container": "var(--error-container)", "on-error-container": "var(--on-error-container)", "background": "var(--background)", "on-background": "var(--on-background)", "surface-variant": "var(--surface-variant)", "clinical-white": "var(--clinical-white)", "tech-gray-muted": "var(--tech-gray-muted)", "soft-blush-bg": "var(--soft-blush-bg)", "medical-pink-light": "var(--medical-pink-light)", "surface-tint": "var(--surface-tint)", "primary-fixed": "var(--primary-fixed)", "primary-fixed-dim": "var(--primary-fixed-dim)", "secondary-fixed": "var(--secondary-fixed)", "secondary-fixed-dim": "var(--secondary-fixed-dim)", "tertiary-fixed": "var(--tertiary-fixed)", "tertiary-fixed-dim": "var(--tertiary-fixed-dim)", "on-primary-fixed": "var(--on-primary-fixed)", "on-primary-fixed-variant": "var(--on-primary-fixed-variant)", "on-secondary-fixed": "var(--on-secondary-fixed)", "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)", "on-tertiary-fixed": "var(--on-tertiary-fixed)", "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)"
+},
+borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+spacing: { unit: "8px", "container-max-width": "1200px", "margin-mobile": "16px", gutter: "24px", "section-padding-desktop": "120px", "section-padding-mobile": "64px" },
+fontFamily: { "body-md": ["Hanken Grotesk"], "headline-md": ["Libre Caslon Text"], "headline-lg": ["Libre Caslon Text"], "headline-lg-mobile": ["Libre Caslon Text"], "display-lg": ["Libre Caslon Text"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"] },
+fontSize: { "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }], "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }], "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "700" }], "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "700" }], "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }], "label-md": ["14px", { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" }] }
+}
+}
+}
+</script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<nav class="nav-header fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center max-w-container-max-width mx-auto px-margin-mobile md:px-gutter py-4">
+<a href="index.html" class="font-headline-md text-primary font-bold tracking-tight">DR. MAHEERA TAHIR</a>
+<div class="hidden md:flex gap-8 items-center">
+<a href="index.html" class="text-on-surface-variant nav-link nav-item font-body-md text-label-md uppercase tracking-wider">Home</a>
+<a href="experience.html" class="text-on-surface-variant nav-link nav-item font-body-md text-label-md uppercase tracking-wider">Experience</a>
+<a href="services.html" class="text-on-surface-variant nav-link nav-item font-body-md text-label-md uppercase tracking-wider">Services</a>
+<a href="skills.html" class="text-primary font-bold nav-link nav-link-active nav-item font-body-md text-label-md uppercase tracking-wider">Skills</a>
+<a href="contact.html" class="text-on-surface-variant nav-link nav-item font-body-md text-label-md uppercase tracking-wider">Contact</a>
+<a href="contact.html" class="bg-primary text-on-primary nav-item nav-cta px-6 py-2 rounded-lg font-body-md font-bold">Get In Touch</a>
+<button class="theme-toggle nav-item" aria-label="Toggle theme"><span class="material-symbols-outlined">dark_mode</span></button>
+</div>
+<button id="mobile-menu-toggle" class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="mobile-menu-closed md:hidden bg-clinical-white border-t border-soft-blush-bg">
+<div class="flex flex-col px-margin-mobile py-4 space-y-3">
+<a href="index.html" class="text-on-surface-variant font-body-md text-label-md uppercase tracking-wider">Home</a>
+<a href="experience.html" class="text-on-surface-variant font-body-md text-label-md uppercase tracking-wider">Experience</a>
+<a href="services.html" class="text-on-surface-variant font-body-md text-label-md uppercase tracking-wider">Services</a>
+<a href="skills.html" class="text-primary font-bold font-body-md text-label-md uppercase tracking-wider">Skills</a>
+<a href="contact.html" class="text-on-surface-variant font-body-md text-label-md uppercase tracking-wider">Contact</a>
+<a href="contact.html" class="bg-primary text-on-primary text-center px-6 py-3 rounded-lg font-body-md font-bold mt-2">Get In Touch</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding-desktop">
+<section class="max-w-container-max-width mx-auto px-gutter mb-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 block">Core Skills</span>
+<h1 class="font-headline-lg text-headline-lg mb-6 leading-tight">Bridging Clinical Excellence & <span class="text-primary italic">Artificial Intelligence</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">A multidisciplinary approach to healthcare, combining decades of clinical observation with advanced LLM benchmarking and medical content strategy to drive the next generation of patient-centric technology.</p>
+</div>
+<div class="md:col-span-5 relative">
+<div class="asymmetric-shape bg-soft-blush-bg w-full aspect-square absolute -z-10 top-4 -right-4 opacity-50"></div>
+<div class="rounded-xl overflow-hidden shadow-xl aspect-[4/5]">
+<img class="w-full h-full object-cover" alt="Dr. Maheera Tahir" src="assets/images/profile.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-low py-16 mb-24">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div>
+<div class="font-display-lg text-display-lg text-primary"><span class="count-up" data-target="15">0</span>+</div>
+<div class="font-label-md text-label-md text-tech-gray-muted uppercase">Years Clinical Experience</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-primary"><span class="count-up" data-target="500">0</span>+</div>
+<div class="font-label-md text-label-md text-tech-gray-muted uppercase">Cases Analyzed</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-primary"><span class="count-up" data-target="98">0</span>%</div>
+<div class="font-label-md text-label-md text-tech-gray-muted uppercase">Accuracy Rate</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-primary"><span class="count-up" data-target="12">0</span></div>
+<div class="font-label-md text-label-md text-tech-gray-muted uppercase">AI Peer Reviews</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-container-max-width mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-clinical-white border border-soft-blush-bg p-10 rounded-xl hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stethoscope</span>
+</div>
+<h2 class="font-headline-md text-headline-md">Clinical Skills</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-2">Diagnostic Precision</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Exceptional accuracy in differential diagnosis across internal medicine specialties, supported by evidence-based methodologies.</p>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-2">Patient Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Expert in clinical risk management and protocol optimization to ensure maximum patient outcomes in hospital environments.</p>
+</div>
+</div>
+<div class="mt-10 flex flex-wrap gap-3">
+<span class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-full font-label-md text-label-md">Internal Medicine</span>
+<span class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-full font-label-md text-label-md">Risk Assessment</span>
+<span class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-full font-label-md text-label-md">Protocols</span>
+</div>
+</div>
+<div class="md:col-span-1 h-full rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Medical technology interface" src="assets/images/banner.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+<h3 class="text-clinical-white font-headline-md text-headline-md mb-2">Technological Integration</h3>
+<p class="text-clinical-white/90 font-label-md text-label-md">Merging human expertise with silicon speed.</p>
+</div>
+</div>
+<div class="md:col-span-1 bg-inverse-surface text-clinical-white p-10 rounded-xl hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-clinical-white" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+<h2 class="font-headline-md text-headline-md">AI & Tech</h2>
+</div>
+<ul class="space-y-6">
+<li class="border-b border-clinical-white/10 pb-4">
+<h3 class="font-label-md text-label-md text-primary-fixed-dim mb-1">LLM Benchmarking</h3>
+<p class="font-body-md text-body-md text-clinical-white/70">Evaluation of medical model accuracy and hallucination rates in clinical prompts.</p>
+</li>
+<li class="border-b border-clinical-white/10 pb-4">
+<h3 class="font-label-md text-label-md text-primary-fixed-dim mb-1">Healthcare AI Ethics</h3>
+<p class="font-body-md text-body-md text-clinical-white/70">Developing frameworks for bias detection and ethical deployment of AI in patient care.</p>
+</li>
+<li>
+<h3 class="font-label-md text-label-md text-primary-fixed-dim mb-1">Medical Data Synthesis</h3>
+<p class="font-body-md text-body-md text-clinical-white/70">Structuring unstructured medical notes for machine learning ingestion and training.</p>
+</li>
+</ul>
+</div>
+<div class="md:col-span-2 bg-clinical-white border border-soft-blush-bg p-10 rounded-xl hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-tertiary/10 rounded-full flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+</div>
+<h2 class="font-headline-md text-headline-md">Communication</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-tech-gray-muted mt-1">history_edu</span>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-2">Medical Content Strategy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Designing content journeys for healthcare startups that build trust and authority with clinical audiences.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-tech-gray-muted mt-1">verified</span>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-2">Evidence-based Writing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Translating complex clinical research into actionable whitepapers and regulatory-compliant communications.</p>
+</div>
+</div>
+</div>
+<div class="mt-10 bg-surface-container p-6 rounded-lg">
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-label-md uppercase">Thought Leadership Engagement</span>
+<span class="font-label-md text-label-md">High</span>
+</div>
+<div class="w-full bg-outline-variant h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-container-max-width mx-auto px-gutter mt-24">
+<h2 class="font-headline-md text-headline-md text-center mb-12">Technology Stack & Methodology</h2>
+<div class="flex flex-wrap justify-center gap-4">
+<div class="px-8 py-4 border border-outline rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">data_object</span>
+<span class="font-label-md text-label-md uppercase">Python for Health-Data</span>
+</div>
+<div class="px-8 py-4 border border-outline rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">token</span>
+<span class="font-label-md text-label-md uppercase">GPT-4o Evaluation</span>
+</div>
+<div class="px-8 py-4 border border-outline rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shield_with_heart</span>
+<span class="font-label-md text-label-md uppercase">HIPAA Compliance</span>
+</div>
+<div class="px-8 py-4 border border-outline rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<span class="font-label-md text-label-md uppercase">Prompt Engineering</span>
+</div>
+<div class="px-8 py-4 border border-outline rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="font-label-md text-label-md uppercase">Medical SEO</span>
+</div>
+</div>
+</section>
+<section class="max-w-container-max-width mx-auto px-gutter mt-24">
+<div class="bg-surface-container-highest rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-tertiary/5 rounded-full blur-3xl"></div>
+<h2 class="font-headline-lg text-headline-lg mb-6 relative z-10">Interested in a Collaboration?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 relative z-10">Whether you are developing a healthcare AI product or need clinical oversight for medical content, let's discuss how my expertise can support your vision.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+<a href="contact.html" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md shadow-md hover:bg-primary-container transition-colors">Book a Consultation</a>
+<a href="experience.html" class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-primary/5 transition-colors">View Portfolio</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-high w-full">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max-width mx-auto px-gutter py-section-padding-mobile md:py-12">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-md text-headline-md text-primary mb-2">Dr. Maheera Tahir</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© 2024 Dr. Maheera Tahir. Medical Excellence meets Tech Innovation.</p>
+<p class="font-body-md text-sm text-on-surface-variant opacity-50">Website by Rustam Ali · Ex KWK Creatives</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a href="https://www.linkedin.com/in/maheera-tahir-833033218/" target="_blank" class="text-on-secondary-fixed-variant font-label-md text-label-md hover:underline decoration-primary transition-all opacity-80 hover:opacity-100">LinkedIn</a>
+<a href="#" class="text-on-secondary-fixed-variant font-label-md text-label-md hover:underline decoration-primary transition-all opacity-80 hover:opacity-100">ResearchGate</a>
+<a href="#" class="text-on-secondary-fixed-variant font-label-md text-label-md hover:underline decoration-primary transition-all opacity-80 hover:opacity-100">PubMed</a>
+<a href="mailto:contact@maheera.tahir" class="text-on-secondary-fixed-variant font-label-md text-label-md hover:underline decoration-primary transition-all opacity-80 hover:opacity-100">Email</a>
+</div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
